@@ -1,4 +1,5 @@
-![alt text](image.png)
+![image](https://github.com/Nyandiekahh/Flatiron-Commercial-Bank/assets/166758870/b0800e5d-7407-4cb0-986c-6d4ee2e455d8)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
