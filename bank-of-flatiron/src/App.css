@@ -1,0 +1,148 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 10px 25px;
+  background-color: #f4f4f9;
+}
+
+/* App Container */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header */
+.App-header {
+  background-color: #1c3a2e;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.header-text {
+  background: #102a68;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+/* Input Fields */
+input {
+  width: 30%;
+  padding: 10px;
+  margin: 0 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Search Form */
+#search-form {
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#search {
+  flex: 1;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+
+#search-form button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* New Item Form */
+#new-item-form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+}
+
+.form-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#new-item-form input {
+  width: 48%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#new-item-form button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#fa-plus {
+  margin-left: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #102a68;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+  background-color: #ececec;
+}
+
+tr:hover td {
+  background-color: #d0e1ff;
+  font-weight: bold;
+  color: #333;
+}
+
