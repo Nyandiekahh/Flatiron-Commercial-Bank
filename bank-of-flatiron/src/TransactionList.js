@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const TransactionList = ({ transactions, setTransactions }) => {
   const [sortConfig, setSortConfig] = useState({ key: '', direction: '' });
+  const [searchTerm, setSearchTerm] = useState('');
 
   // Fetch transactions when the component mounts
   useEffect(() => {
@@ -34,7 +35,7 @@ const TransactionList = ({ transactions, setTransactions }) => {
   // Function to sort the transactions
   const handleSort = (key) => {
     const direction = sortConfig.key === key && sortConfig.direction === 'ascending' ? 'descending' : 'ascending';
-    
+
     const sortedTransactions = [...transactions].sort((a, b) => {
       if (a[key] < b[key]) return direction === 'ascending' ? -1 : 1;
       if (a[key] > b[key]) return direction === 'ascending' ? 1 : -1;
@@ -45,12 +46,23 @@ const TransactionList = ({ transactions, setTransactions }) => {
     setTransactions(sortedTransactions);
   };
 
+  // Function to filter transactions based on the search term
+  const filteredTransactions = transactions.filter(transaction =>
+    transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div>
       <h2>Transaction List</h2>
       <div>
         <button onClick={() => handleSort('description')}>Sort by Description</button>
         <button onClick={() => handleSort('category')}>Sort by Category</button>
+        <input
+          type="text"
+          placeholder="Search by description..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
       <table>
         <thead>
@@ -63,7 +75,7 @@ const TransactionList = ({ transactions, setTransactions }) => {
           </tr>
         </thead>
         <tbody>
-          {transactions.map(transaction => (
+          {filteredTransactions.map(transaction => (
             <tr key={transaction.id}>
               <td>{transaction.date}</td>
               <td>{transaction.description}</td>
