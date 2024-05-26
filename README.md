@@ -1,5 +1,6 @@
 # Flatiron-Commercial-Bank
-![image](https://github.com/Nyandiekahh/Flatiron-Commercial-Bank/assets/166758870/1c8af6fd-bb98-4f92-a0c7-d2de96fec69d)
+![image](https://github.com/Nyandiekahh/Flatiron-Commercial-Bank/assets/166758870/3ac689f9-c442-42ea-ae47-368b6fd6b874)
+
 
 # Getting Started with Create React App
 
